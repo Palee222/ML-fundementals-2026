@@ -243,8 +243,7 @@ pythondf = pd.read_csv('bank-additional-full.csv', sep=';')
 
 Lecture material: Lecture 2 (Data Inspection), Lecture 5 (Preprocessing and Pipeline Discipline).
 
-• Identify both explicit missing values (e.g., NaN) and implicit missing values (e.g., categories such as unknown
-or sentinel numerical values, i.e., values that may represent special codes rather than genuine measurements).
+• Identify both explicit missing values (e.g., NaN) and implicit missing values (e.g., categories such as unknown or sentinel numerical values, i.e., values that may represent special codes rather than genuine measurements).
 
 • Quantify the extent of missingness for each affected variable.
 
@@ -254,6 +253,14 @@ category, indicator variable).
 • Clearly state which operations must be fitted using the training set only, and explain why.
 Note: Your strategy should distinguish between “data cleaning” decisions (e.g., correcting inconsistent entries)
 and “modeling” decisions (e.g., whether missingness itself may carry predictive information).
+
+My answer
+* explicit missing value
+   * none of these 
+* implicit missing value
+   * default
+   * housing
+   * loan
 
 # Task 5: Encoding Categorical Variables
 
