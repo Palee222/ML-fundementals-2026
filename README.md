@@ -256,11 +256,12 @@ and “modeling” decisions (e.g., whether missingness itself may carry predict
 
 My answer
 * explicit missing value
-   * none of these 
+   * poutcome 
 * implicit missing value
    * default
    * housing
    * loan
+* quantifying value missingness is in my code document
 
 # Task 5: Encoding Categorical Variables
 
