@@ -262,6 +262,8 @@ My answer
    * housing
    * loan
 * quantifying value missingness is in my code document
+* My strategy for handling missing values is keeping them in the data set, but marking them with a different value. As it is visible in my code, I marked them with NA since it is a unique value for the missing values. The reason I would not remove them is because the dataset is not large enough in my judgement so I would rather not remove values which would desort the outcome.
+* 
 
 # Task 5: Encoding Categorical Variables
 
