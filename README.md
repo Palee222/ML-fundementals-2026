@@ -115,6 +115,11 @@ My explanation:
 
 * one variable that may require special consideration before modeling
     * Maybe it is the job variable, because it very much effects whether a person is eligible for a contract or not. This is also corrolated with income since I assume the person has to pay for the contract and wage depends on the job type. Therefore there are income differences and other variables can be assumed from this. For example the person had a loan or whether the person defaulted or not.
+ 
+* plot usage explanation
+   * For subscription distribution I used the barplot because it represents 2 values compared to each other very nicely. Also, I have included some numerical values and percentages so it provides those informations visually too.
+   * For age distribution I have used both gaussian kde plot which is a non-parametric, smooth, continuous curve used to visualize the probability density function (PDF) of a dataset and barplot. The barplot is because it represents the distribution including every age as a bar which holds a lot more information. On the other side the gaussian kde function is a little more simplified and shows us well the distribution of ages which is nearly normal but a bit more right skewed.
+   * For representing the job I used a barplot because is separates the distinct jobs and show the number of people working in that job and also showing a distribution if we look at the whole diagram. Also for the relationship status is for the same reason that it is much more informative as a barplot than any other.    
 
 AI prompt disclaimer:
 
