@@ -293,6 +293,14 @@ and Expressiveness).
 Note: Encoding is not a purely mechanical transformation. Your justification should explicitly connect your encoding
 decisions to the assumptions and behavior of Logistic Regression
 
+* My answer
+   * categorical variables
+      * education
+      * contact
+      * job
+      * marital
+      * poutcome  
+
 # Task 6: Feature Selection
 Lecture material: Lecture 5 (Feature Selection), Lecture 6 (Linear Models), Lecture 9 (Pipeline Discipline).
 
