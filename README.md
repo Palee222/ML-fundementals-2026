@@ -45,7 +45,9 @@ My answers
 My answer
 
 For the order I have decided on the one which can be seen in thes jupyter notebook for the following reasons:
+
     * First I chose to identify the prediction target, which gave me an idea which way should I start my assignment. Then I chose task ordering, to structure my tasks according to the target variable and what seemed reasonable to work with the data.
+    
     * Then the reason I chose data exploration as 3rd is to verify whether I can go on with my 
 
 I will provide the rest of explanation at each task part.
@@ -290,8 +292,7 @@ and Expressiveness).
     – the interpretability of model coefficients;
     – the types of decision boundaries a linear model can represent.
 
-Note: Encoding is not a purely mechanical transformation. Your justification should explicitly connect your encoding
-decisions to the assumptions and behavior of Logistic Regression
+Note: Encoding is not a purely mechanical transformation. Your justification should explicitly connect your encoding decisions to the assumptions and behavior of Logistic Regression
 
 * My answer
    * categorical variables
@@ -299,8 +300,20 @@ decisions to the assumptions and behavior of Logistic Regression
       * contact
       * job
       * marital
-      * poutcome  
-
+      * poutcome
+    
+   * Nominal variables
+      * contact
+      * job
+      * marital
+      * poutcome
+   * Ordinal variables
+      * education
+    
+   * My reason behind this classification is that ordianl variables are variables that can be put in some ascending or descending order. In this case education can be put into order for example primary school -> high school -> Bachelor's degree -> Master's degree and so on. However the categorical variables cannot be put into such order. They are all on the "same level" and we cannot construct an order from those variables. So there is no meaningful order.
+ 
+   * Chosen encoding method -> I will use one hot encoding. See the application in my code.
+ 
 # Task 6: Feature Selection
 Lecture material: Lecture 5 (Feature Selection), Lecture 6 (Linear Models), Lecture 9 (Pipeline Discipline).
 
