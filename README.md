@@ -339,6 +339,12 @@ availability at prediction time, or risk of data leakage).
 • Discuss the consequences of performing feature selection on the entire dataset before splitting.
 Note: Feature selection is not purely statistical. Your reasoning should explicitly connect your decisions to the assumptions and stability of Logistic Regression
 
+My answers
+* The 'education_illiterate', 'job_unknown', 'marital_unknown' has been removed due to very low variance. Also, rare categories add noise and rarely help the prediction of the target variable. So the reason why I determined it as a "low variance" feature is because it is significantly less than other variables as seen in my code.
+
+
+
+
 # Task 7: Data Splitting
 Lecture material: Lecture 2 (Data Splitting and Leakage), Lecture 9 (ML Pipeline).
 
