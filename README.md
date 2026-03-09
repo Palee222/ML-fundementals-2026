@@ -315,7 +315,14 @@ Note: Encoding is not a purely mechanical transformation. Your justification sho
    * Chosen encoding method -> I will use one hot encoding. See the application in my code.
 
    * In my opinion and according to my knowledge those encoders should be fitted to the training set only which have none or very few (1-2) missing values from the encoded categorical variables. It is because the model should have accessible data which it can learn from and no out-of-range variables which only add to the coputational time.
-   * 
+   * the dimensionality of the dataset;
+   * the interpretability of model coefficients;
+   * the types of decision boundaries a linear model can represent.
+
+
+
+
+
 # Task 6: Feature Selection
 Lecture material: Lecture 5 (Feature Selection), Lecture 6 (Linear Models), Lecture 9 (Pipeline Discipline).
 
