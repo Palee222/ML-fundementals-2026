@@ -320,16 +320,12 @@ Note: Encoding is not a purely mechanical transformation. Your justification sho
    * the types of decision boundaries a linear model can represent.
 
 
-
-
-
 # Task 6: Feature Selection
 Lecture material: Lecture 5 (Feature Selection), Lecture 6 (Linear Models), Lecture 9 (Pipeline Discipline).
 
 • Identify and remove features with very low variance, if any. Justify the criterion used to define “low” variance.
 
-• Identify highly correlated numerical features and decide whether any should be removed. Clearly state the
-threshold used and justify your decision.
+• Identify highly correlated numerical features and decide whether any should be removed. Clearly state the threshold used and justify your decision.
 
 • Discuss whether any features should be removed based on conceptual considerations (e.g., redundancy,
 availability at prediction time, or risk of data leakage).
@@ -341,8 +337,7 @@ Note: Feature selection is not purely statistical. Your reasoning should explici
 
 My answers
 * The 'education_illiterate', 'job_unknown', 'marital_unknown' has been removed due to very low variance. Also, rare categories add noise and rarely help the prediction of the target variable. So the reason why I determined it as a "low variance" feature is because it is significantly less than other variables as seen in my code.
-
-
+* After doing some research, about 0.8 is the treshold used for correlation. This seem like a valid treshold since anything correlated above this may affect the alorithm negatively. I would most probably remove the features which are shown with dark red or dark blue on the correlation matrix that has been visualised with the Python code.
 
 
 # Task 7: Data Splitting
