@@ -338,6 +338,7 @@ Note: Feature selection is not purely statistical. Your reasoning should explici
 My answers
 * The 'education_illiterate', 'job_unknown', 'marital_unknown' has been removed due to very low variance. Also, rare categories add noise and rarely help the prediction of the target variable. So the reason why I determined it as a "low variance" feature is because it is significantly less than other variables as seen in my code.
 * After doing some research, about 0.8 is the treshold used for correlation. This seem like a valid treshold since anything correlated above this may affect the alorithm negatively. I would most probably remove the features which are shown with dark red or dark blue on the correlation matrix that has been visualised with the Python code.
+* I believe the features we should be attention to is the 'default', 'previous', 'poutcome' feature because these maybe available at prediction time and cause data leakage
 
 
 # Task 7: Data Splitting
