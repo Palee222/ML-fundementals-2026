@@ -282,7 +282,7 @@ and Expressiveness).
 • Distinguish between nominal variables (categories without intrinsic order, e.g., job type) and ordinal variables
 (categories with a meaningful order, e.g., education level), and justify your classification.
 
-• Select and apply an appropriate encoding strategy for each categorical variable.
+• Select and apply an appropriate encoding strategy for each categorical variable. -> applied in my code pdf and jupyter notebook
 
 • Clearly state which encoders must be fitted on the training set only, and explain why.
 
@@ -313,7 +313,9 @@ Note: Encoding is not a purely mechanical transformation. Your justification sho
    * My reason behind this classification is that ordianl variables are variables that can be put in some ascending or descending order. In this case education can be put into order for example primary school -> high school -> Bachelor's degree -> Master's degree and so on. However the categorical variables cannot be put into such order. They are all on the "same level" and we cannot construct an order from those variables. So there is no meaningful order.
  
    * Chosen encoding method -> I will use one hot encoding. See the application in my code.
- 
+
+   * In my opinion and according to my knowledge those encoders should be fitted to the training set only which have none or very few (1-2) missing values from the encoded categorical variables. It is because the model should have accessible data which it can learn from and no out-of-range variables which only add to the coputational time.
+   * 
 # Task 6: Feature Selection
 Lecture material: Lecture 5 (Feature Selection), Lecture 6 (Linear Models), Lecture 9 (Pipeline Discipline).
 
