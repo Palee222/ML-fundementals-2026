@@ -7,6 +7,8 @@ Course: Machine Learning foundation
 
 Semester: 2025-2026 2nd semester
 
+AI disclaimer: I have only used generative AI for some coding parts, since my coding skills are not the best yet. However, I have done the explanations and analysis myself WITHOUT the use of any external help. 
+
 # Task 1 -> Identifying the Prediction Target
 
 *   Inspect the dataset and identify which column should be treated as the target variable for this assignment.
@@ -353,25 +355,25 @@ Lecture material: Lecture 2 (Data Splitting and Leakage), Lecture 9 (ML Pipeline
 • Perform stratified splitting with respect to the target variable and explain why stratification is necessary for
 this dataset.
 
-• Clearly describe at which stage of your pipeline the split must occur, and explain what types of data leakage
-would arise if splitting were performed later.
+• Clearly describe at which stage of your pipeline the split must occur, and explain what types of data leakage would arise if splitting were performed later.
 
-Note: A recommended strategy is to first split the dataset into a training set and a temporary set, and then
-split the temporary set into validation and test sets. Use the stratify argument of train test split where
-appropriate
+Note: A recommended strategy is to first split the dataset into a training set and a temporary set, and then split the temporary set into validation and test sets. Use the stratify argument of train test split whereappropriate
+
+My answer:
+* The reason I chose the 80-20 split is because it is one of the common ones and in my opinion 80% of data is enough to train the model and the remaining 20% is the validation + test set.
+* I have already done stratified splitting and stratification is highly recommended to maintain the class balances. Also to ensure that data is accurately represented especially when they are imbalanced.
+* In my pipline the splitting occurs after feature selection, encoding and missing value management because first I wanted to make sure that the data is ready to be split. Readyness means that there is an off range value set for missing values, the categorical values are properly encoded and there is a feature that can give a guide how to go further with my work. If I have performed the splitting later I believe target data leakage would have occurred. This type of leakage is when information about the target variable is leaked for the model in some point of the training.
 
 # Task 8 Addressing Class Imbalance
 
 Lecture material: Lecture 3 (Class Imbalance), Lecture 4 (Evaluation Metrics), Lecture 9 (Pipeline Discipline).
 
-• Quantify the class distribution in the training set and explain why imbalance is or is not a concern for this
-prediction task.
+• Quantify the class distribution in the training set and explain why imbalance is or is not a concern for this prediction task.
 
 • Propose and apply a resampling strategy (e.g., random oversampling, SMOTE, or ADASYN). Clearly justify
 at which stage of the pipeline the resampling step should occur.
 
-• Justify your choice of resampling method in terms of its assumptions and expected effect on the learning
-algorithm.
+• Justify your choice of resampling method in terms of its assumptions and expected effect on the learning algorithm.
 
 • Explain what would happen if resampling were applied before splitting the dataset into training, validation,
 and test sets. Discuss the implications for model evaluation.
