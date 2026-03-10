@@ -259,9 +259,9 @@ Lecture material: Lecture 2 (Data Inspection), Lecture 5 (Preprocessing and Pipe
 • Propose and justify a strategy for handling missing values in each case (e.g., removal, imputation, separate
 category, indicator variable).
 
-• Clearly state which operations must be fitted using the training set only, and explain why.
-Note: Your strategy should distinguish between “data cleaning” decisions (e.g., correcting inconsistent entries)
-and “modeling” decisions (e.g., whether missingness itself may carry predictive information).
+• Clearly state which operations must be fitted using the training set only, and explain why. ???
+
+Note: Your strategy should distinguish between “data cleaning” decisions (e.g., correcting inconsistent entries) and “modeling” decisions (e.g., whether missingness itself may carry predictive information).
 
 My answer
 * explicit missing value
@@ -271,7 +271,7 @@ My answer
    * housing
    * loan
 * quantifying value missingness is in my code document
-* My strategy for handling missing values is keeping them in the data set, but marking them with a different value. As it is visible in my code, I marked them with NA since it is a unique value for the missing values. The reason I would not remove them is because the dataset is not large enough in my judgement so I would rather not remove values which would desort the outcome.
+* My strategy for handling missing values is keeping them in the data set, but marking them with a different value. As it is visible in my code, I marked them with NA since it is a unique value for the missing values. The reason I would not remove them is because the dataset is not large enough in my judgement so I would rather not remove values which would desort the outcome. So in my best judgement, missing values may carry predictive information
 * 
 
 # Task 5: Encoding Categorical Variables
@@ -342,7 +342,7 @@ My answers
 * After doing some research, about 0.8 is the treshold used for correlation. This seem like a valid treshold since anything correlated above this may affect the alorithm negatively. I would most probably remove the features which are shown with dark red or dark blue on the correlation matrix that has been visualised with the Python code.
 * I believe the features we should be attention to is the 'default', 'previous', 'poutcome' feature because these maybe available at prediction time and cause data leakage. Those have been removed from the data set due to low variance.
 * Feature selection should be performed using the training set only because the model will base it's predictions and "knowledge" on the training data, which will highly determine what answer we have from the model. (Hopefully not just 42 :D) So we should make sure that in only contains the features that are needed for us. Also, this prevents data leakage and biase in the model. We can also check for independence within the training data and check if there is not large outliers.
-* The model will not recognize if there is any unusual when we provide the test and validation set since we have done feature selection on the entire dataset and have most probably discarded the unwanted features. So technically the model will be useless in short.
+* Performing feature selection on the entire dataset before splitting is not a greate solution. The model will not recognize if there is any unusual when we provide the test and validation set since we have done feature selection on the entire dataset and have most probably discarded the unwanted features. So technically the model will be useless in short.
 
 
 # Task 7: Data Splitting
