@@ -383,6 +383,9 @@ and test sets. Discuss the implications for model evaluation.
 Note: Resampling is part of the training procedure and must be applied to the training set only. Validation and
 test sets must preserve the original class distribution
 
+My answer
+* The class imbalance is a bit of a conert for this prediction task because the prediction model will mostly learn instances where a customer did not sign the contract offered by the company. So from this the model will learn that with similar features the customer will not sign up, so the model learns as such. So, this imbalance has to be balanced out to make sure the model is not biased towards the features of a non signing customer
+
 # Task 9: Feature Scaling
 
 Lecture material: Lecture 5 (Feature Scaling), Lecture 6 (Logistic Regression and Optimization)..
