@@ -370,21 +370,23 @@ Lecture material: Lecture 3 (Class Imbalance), Lecture 4 (Evaluation Metrics), L
 
 • Quantify the class distribution in the training set and explain why imbalance is or is not a concern for this prediction task.
 
-• Propose and apply a resampling strategy (e.g., random oversampling, SMOTE, or ADASYN). Clearly justify
-at which stage of the pipeline the resampling step should occur.
+• Propose and apply a resampling strategy (e.g., random oversampling, SMOTE, or ADASYN). Clearly justify at which stage of the pipeline the resampling step should occur.
 
 • Justify your choice of resampling method in terms of its assumptions and expected effect on the learning algorithm.
 
-• Explain what would happen if resampling were applied before splitting the dataset into training, validation,
-and test sets. Discuss the implications for model evaluation.
+• Explain what would happen if resampling were applied before splitting the dataset into training, validation, and test sets. Discuss the implications for model evaluation.
 
 • Briefly discuss how class imbalance affects evaluation metrics such as accuracy, precision, and recall.
 
-Note: Resampling is part of the training procedure and must be applied to the training set only. Validation and
-test sets must preserve the original class distribution
+Note: Resampling is part of the training procedure and must be applied to the training set only. Validation and test sets must preserve the original class distribution
 
 My answer
 * The class imbalance is a bit of a conert for this prediction task because the prediction model will mostly learn instances where a customer did not sign the contract offered by the company. So from this the model will learn that with similar features the customer will not sign up, so the model learns as such. So, this imbalance has to be balanced out to make sure the model is not biased towards the features of a non signing customer
+* I will be using random oversampling as a resampling strategy. I believe it should occur after data splitting because as far as I know random oversampling randomly duplicates instances of the minority class which may disort the data for the model which we cannot control since it is random. Therefore we cannot control what does the model learn from the newly balanced data.
+* I would like to justify my choice of resampling with a few of its assumptions and expected effect on the leaerning algorithm
+   * One of the assumptions is that the observations are independent. In the case of the banking data, whether customers sign up or not is independet from eachother. Since it is assumed that the customers do not influence eachother into choosing one or another. As of expected effects, it does what it should, meaning it with random choices it creates class imbalance and in my opinion this may cause the learning algorithm to learn features duplicated, due to the random sampling of the minority class.
+   * What would happen before splitting the dataset is that information from the test set can leak into the training set due to overlapping resampled data. Which would cause a data leakage through preprocessing if we are not careful. The implications of model evaluations would be that the model would be biased in prediction and would not predict accurately those customers that slitely differ from those in the test data. So in short the model would be a bit useless.
+* 
 
 # Task 9: Feature Scaling
 
